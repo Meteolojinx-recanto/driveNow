@@ -1,9 +1,9 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SlArrowDown } from 'react-icons/sl';
 import { SlArrowUp } from 'react-icons/sl';
 
-const Select = ({ arr, selectedHandler, icon, placeHolder }) => {
+const Select = ({ arr, selectedHandler, icon, placeHolder, resetTrigger }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState('');
 
@@ -15,21 +15,22 @@ const Select = ({ arr, selectedHandler, icon, placeHolder }) => {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    if (resetTrigger) {
+      setSelected('');
+    }
+  }, [resetTrigger]);
+
   return (
     <div className='relative w-full'>
       <div
         onClick={toggleDropdown}
         className={`flex items-center justify-between bg-white border rounded-full p-1 cursor-pointer ${
-          selected ? 'text-black' : 'text-gray-500',
-          selected ? 'border-black' : 'border-[#EAEAEA]'
+          (selected ? 'text-black' : 'text-gray-500', selected ? 'border-black' : 'border-[#EAEAEA]')
         }`}
       >
         <div className='flex items-center text-xs'>
-          {icon && (
-            <span className={`m-2 text-lg ${selected ? 'text-black' : 'text-gray-500'}`}>
-              {icon}
-            </span>
-          )}
+          {icon && <span className={`m-2 text-lg ${selected ? 'text-black' : 'text-gray-500'}`}>{icon}</span>}
           <span>{selected || placeHolder}</span>
         </div>
         <span className='mr-2'>{isOpen ? <SlArrowUp /> : <SlArrowDown />}</span>

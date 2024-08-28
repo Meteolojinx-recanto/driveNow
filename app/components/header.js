@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const style = {
-  header: 'flex items-center justify-items-start space-x-36 p-6 bg-white sticky top-0 left-0 right-0',
+  header: 'flex items-center justify-items-start space-x-36 p-6 bg-white sticky top-0 left-0 right-0 z-50',
   leftContainer: 'flex items-center justify-around',
   img: 'flex-shrink-0',
   nav: '', 
