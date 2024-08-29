@@ -79,6 +79,7 @@ export default function Home() {
       (!selectedFilters.model || car.name.includes(selectedFilters.model)) &&
       (!selectedFilters.color || car.color.includes(selectedFilters.color)) &&
       // (!selectedFilters.transmission || car.transmission.includes(selectedFilters.transmission)) &&
+      (!selectedFilters.fuel || car.fuel.includes(selectedFilters.fuel)) &&
       (!searchQuery || car.name.toLowerCase().includes(searchQuery.toLowerCase()))
     );
   });
