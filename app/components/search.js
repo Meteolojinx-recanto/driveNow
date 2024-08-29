@@ -8,7 +8,7 @@ const Search = ({ searchHandler, placeholder }) => {
   };
 
   return (
-    <div className="flex items-center bg-white  p-2 h-10 w-1/3 m-4 rounded-full">
+    <div className="flex items-center bg-white  p-2 h-10 w-1/2 m-4 rounded-full">
       <BiSearchAlt className="mr-2" size={28} color='black'/>
       <input
         type="text"

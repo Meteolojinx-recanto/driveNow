@@ -86,7 +86,7 @@ export default function Home() {
   return (
     <main className='flex '>
       <Filtres setSelectedFilters={setSelectedFilters} clearFiltres={clearFiltres} selectedFilters={selectedFilters} />
-      <div className='flex w-1/2 h-20 fixed top-23 left-[386px] right-0'>
+      <div className='flex w-1/2 h-20 fixed top-23 left-[350px] right-0'>
         <Search searchHandler={searchHandler} placeholder='Ищите авто по названиям' />
         <ActiveFiltersBar selectedFilters={selectedFilters} clearFilter={clearFilter} />
       </div>
