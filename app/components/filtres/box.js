@@ -1,24 +1,25 @@
-const Box = ({ selectedBodyIndex, handleClickOnBody, selectedTransmissionIndex, handleClickOnTransmission, body, transmission }) => {
+const Box = ({
+  selectedBodyIndex,
+  handleClickOnBody,
+  selectedTransmissionIndex,
+  handleClickOnTransmission,
+  body,
+  transmission,
+}) => {
   return (
     <div className='grid grid-cols-3 ml-2'>
       <div className='col-span-3 p-2'>Кузов</div>
       {body.map((b, index) => (
-        <BoxItem 
-          key={index} 
-          index={index} 
-          selectedIndex={selectedBodyIndex} 
-          handleClick={handleClickOnBody} 
-          b={b} 
-        />
+        <BoxItem key={index} index={index} selectedIndex={selectedBodyIndex} handleClick={handleClickOnBody} b={b} />
       ))}
       <div className='col-span-3 p-2'>Коробка передач</div>
       {transmission.map((t, index) => (
-        <BoxItem 
-          key={index} 
-          index={index} 
-          selectedIndex={selectedTransmissionIndex} 
-          handleClick={handleClickOnTransmission} 
-          b={t} 
+        <BoxItem
+          key={index}
+          index={index}
+          selectedIndex={selectedTransmissionIndex}
+          handleClick={handleClickOnTransmission}
+          b={t}
         />
       ))}
     </div>
