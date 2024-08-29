@@ -79,7 +79,7 @@ const Filtres = ({ setSelectedFilters, clearFiltres, selectedFilters }) => {
   };
 
   return (
-    <aside className='grid grid-cols-1 w-96 bg-white rounded-b-lg pb-4'>
+    <aside className='flex flex-col w-96 bg-white rounded-b-lg pb-4'>
       <div className='flex flex-col items-center'>
         <h2 className='font-medium text-lg'>Фильтры</h2>
       </div>

@@ -6,7 +6,7 @@ const ActiveFiltersBar = ({ selectedFilters, clearFilter }) => {
 
   return (
     filters.length > 0 && (
-      <div className='flex space-x-2 bg-gray-100 h-7 p-3'>
+      <div className='flex space-x-2  h-7 p-3'>
         {filters.map(([key, value]) => (
           <div key={key} className='flex items-center bg-black text-white  p-6 rounded-full'>
             {value}
